@@ -2,15 +2,17 @@ import React from "react";
 import star from "../../public/images/star.png"
 import cover from "../../public/images/cover.jpg";
 
+
+
 export default function Card(props) {
-    console.log("../images/" + props.img);
-    return (
-      <div className="card">
-        <img
-          src={cover}
-          className="card--image"
-          alt="jpg"
-        ></img>
+    // console.log("../images/" + props.img);
+  return (
+   
+    <div className="card">
+   {  props.openSpots === 0 && <div className="card--badge">
+        SOLD OUT
+    </div>}
+        <img src={cover} className="card--image" alt="jpg"></img>
         <div className="card-stats">
           <img src={star} alt="star" style={{ height: "14px" }}></img>
           <span>{props.rating}</span>
@@ -23,9 +25,10 @@ export default function Card(props) {
         </p>
       </div>
 
-      /************* MY CODE ********************/
 
-      /*
+    /************* MY CODE ********************/
+
+    /*
     <div className="all-cards">
       <div className="card">
         <div className="card--details">
@@ -107,5 +110,5 @@ export default function Card(props) {
         </div>
       </div>
     </div> */
-    );
+  );
 }

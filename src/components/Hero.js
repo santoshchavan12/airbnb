@@ -1,6 +1,7 @@
 import React from "react"
-import gridbg from "../images/gridbg.png"
-// import logo1 from "../images/logo1.png"
+import gridbg from "../../public/images/gridbg.png"
+
+
 export default function Hero() {
     return (
         <section className="hero">
